@@ -1,0 +1,47 @@
+Trigger vs. Stored Procedure :
+Trigger: Automatically executes in response to events on a table (e.g., INSERT, UPDATE, DELETE operations). It cannot be called explicitly and is bound to a specific table.
+Stored Procedure: A user-defined code block executed explicitly by calling its name with parameters.
+
+
+Stored Procedure vs. Function:
+Stored Procedure: Can perform actions such as INSERT, UPDATE, and DELETE. It may or may not return values and is called using EXEC.
+Function: Designed to perform calculations and return a value or table. Cannot modify data or perform actions like a stored procedure.
+
+DROP vs. DELETE Statement:
+DROP: Permanently removes a table, index, or database from the database schema. Cannot be rolled back.
+DELETE: Removes rows from a table based on a condition and can be rolled back with transactions if not committed.
+
+
+SELECT vs. SELECT INTO Statement:
+SELECT: Retrieves data from one or more tables without creating a new table.
+SELECT INTO: Creates a new table and copies data from the original table(s) into it in one step, allowing for a quick backup or data duplication.
+
+DDL, DML, DCL, DQL:
+DDL (Data Definition Language): Defines the structure of database objects (e.g., CREATE, ALTER).
+DML (Data Manipulation Language): Manipulates data within tables (INSERT, UPDATE, DELETE).
+DCL (Data Control Language): Controls access (e.g., GRANT, REVOKE).
+DQL (Data Query Language): Used to retrieve data (SELECT).
+
+Table-Valued vs. Multi-Statement Function:
+
+Table-Valued Function: Returns a table and can be used inline in SELECT statements. Typically, it consists of a single query.
+Multi-Statement Function: Allows multiple statements and complex logic, returning a table as the result.
+
+
+VARCHAR(50) vs. VARCHAR(MAX):
+VARCHAR(50): Allocates up to 50 bytes for variable-length character data, useful for smaller text fields.
+VARCHAR(MAX): Can store up to 2GB of text data, useful for very large text fields but requires more memory management by SQL Server.
+
+
+SQL Authentication vs. Windows Authentication:
+SQL Authentication: Uses a username and password created within SQL Server, ideal for non-Windows users.
+Windows Authentication: Uses Windows user credentials, relying on the Windows security model, often preferred in Windows-based environments for enhanced security.
+
+Inline Function vs. View:
+Inline Function: Returns a table and can accept parameters, enabling dynamic data retrieval.
+View: A virtual table that represents a saved query and does not accept parameters; used primarily for simplifying complex queries or controlling access to data.
+
+Identity Constraint vs. Unique Constraint:
+
+Identity Constraint: Automatically generates a unique number for each row in a table, typically used for primary keys.
+Unique Constraint: Ensures all values in a column are unique but does not automatically generate values like an identity column.
